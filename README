@@ -1,0 +1,43 @@
+Author: Emanuel Brici
+email: emanuel.brici@gmail.com
+
+Files:
+	FAMachine.java:
+	    Builds the Finite Automaton Machine
+	NFA.java:
+	    Constructor for data type
+	RegularExpressions.txt:
+	     A file that holds the example regular expressions that were given out in class
+	README
+
+Description:
+The files listed above, when complied and built, will build a Finite Automaton.
+
+Build environment:$java -version
+                  java version "1.8.0_51"
+
+To build and run on WSU lab machines log into the linux machine. Then change the
+directory you are in into the directory where you have opened and stored the files
+above.
+The following commands will compile and run the program:
+            $javac FAMachine.java NFA.java
+                This will compile my .java files into .class files
+            $java FAMachine <filename.txt>
+                This will run the program with the text file of
+                your liking and print out an NFA transition table
+                with the start and final states indicated.
+
+Example of what the out put should be:
+            $javac javac FAMachine.java NFA.java
+            $java FAMachine RegularExpressions.txt
+            Regular Expression : ab+
+                 (q1,a) -----> q2
+                 (q2,E) -----> q6 <- F
+                 (q3,b) -----> q4
+                 (q4,E) -----> q6 <- F
+            S -> (q5,E) -----> q1
+            S -> (q5,E) -----> q3
+
+            In this example q5 is the start state and q6 in the final state.
+
+
